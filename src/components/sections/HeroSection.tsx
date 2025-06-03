@@ -1,16 +1,46 @@
+import { useEffect, useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 
+const videos = [
+  '/rft3.mp4',
+  '/rft 1.mp4',
+  '/rft2.mp4',
+];
+
+const VIDEO_DURATION = 5000; // 5 seconds per video
+
 const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % videos.length);
+    }, VIDEO_DURATION);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="home" className="pt-28 pb-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white animate-fadeIn">
-      <div className="container mx-auto px-4 md:px-8">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white animate-fadeIn">
+      {/* Animated video background */}
+      {videos.map((src, idx) => (
+        <video
+          key={src}
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${current === idx ? 'opacity-100' : 'opacity-0'}`}
+        />
+      ))}
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent z-10"></div>
+      <div className="container mx-auto px-4 md:px-8 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 animate-slideUp">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Pioneering the <span className="text-blue-300">Future</span> of Technology
+              Pioneering the <span className="text-blue-300">Future</span> of Technologies
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-lg">
-              Ruhil Future Technology delivers cutting-edge solutions that transform businesses and drive innovation in a rapidly evolving digital landscape.
+              Ruhil Future Technologies delivers cutting-edge solutions that transform businesses and drive innovation in a rapidly evolving digital landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -29,16 +59,7 @@ const HeroSection = () => {
           </div>
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-slideUp" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
             <div className="relative">
-              <div className="w-full md:w-[500px] h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Digital Technology" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent"></div>
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-400 rounded-lg rotate-12 opacity-20 animate-pulse"></div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-indigo-500 rounded-full opacity-20 animate-pulse"></div>
+              {/* Decorative shapes can remain or be removed as desired */}
             </div>
           </div>
         </div>

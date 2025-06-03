@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setToast({ message: 'Welcome to Ruhil Future Technology!', icon: <CheckCircle2 className="text-green-500" /> });
+      setToast({ message: 'Welcome to Ruhil Future Technologies!', icon: <CheckCircle2 className="text-green-500" /> });
     }, 1000);
   }, []);
 
@@ -60,6 +60,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+
         {/* Toast Notification */}
         {toast && (
           <div className="fixed bottom-6 right-6 z-[100] bg-white border border-blue-200 shadow-lg rounded-lg px-5 py-3 flex items-center gap-3 animate-fadeIn">
@@ -67,47 +68,23 @@ function App() {
             <span className="text-blue-900 font-medium">{toast.message}</span>
           </div>
         )}
-        {/* Floating Help Button */}
-        <button
-          className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg w-16 h-16 flex items-center justify-center border-4 border-white focus:outline-none"
-          onClick={() => setShowChat(true)}
-          aria-label="Open Help Chat"
+
+        {/* Floating Logo Button */}
+        <a
+          href="https://uatweb.gyansetu.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-4 right-8 z-50 flex flex-col items-center focus:outline-none hover:scale-105 transition-transform"
+          aria-label="Go to uatweb.gyansetu.ai"
         >
-          <MessageSquareDot size={36} />
-        </button>
-        {/* Chat Modal */}
-        {showChat && (
-          <div className="fixed inset-0 z-50 flex items-end justify-end bg-black bg-opacity-0">
-            <div className="bg-white rounded-xl shadow-2xl p-4 max-w-xs w-full m-8 relative flex flex-col h-[420px]">
-              <button className="absolute top-2 right-2 text-2xl text-gray-400 hover:text-red-500" onClick={() => setShowChat(false)}>&times;</button>
-              <h2 className="text-lg font-bold mb-2 text-blue-700">Chat with us</h2>
-              <div className="flex-1 overflow-y-auto mb-2 space-y-2 pr-2">
-                {chatMessages.map((msg, i) => (
-                  <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`px-3 py-2 rounded-lg text-sm max-w-[80%] ${msg.from === 'user' ? 'bg-blue-100 text-blue-900' : 'bg-gray-100 text-gray-700'}`}>{msg.text}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-2 mt-2">
-                <input
-                  type="text"
-                  value={chatInput}
-                  onChange={e => setChatInput(e.target.value)}
-                  onKeyDown={e => { if (e.key === 'Enter') handleSend(); }}
-                  placeholder="Type your message..."
-                  className="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button
-                  onClick={handleSend}
-                  className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
-                  aria-label="Send message"
-                >
-                  <Send size={20} />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+          <img
+            src="/gyan.png"
+            alt="Gyansetu Logo"
+            className="w-40 h-50 object-contain"
+          />
+          <span className="font-extrabold text-2xl text-black drop-shadow-lg animate-pulse -mt-2 p-0" style={{letterSpacing: '2px'}}>GyanSetu</span>
+        </a>
+
       </Router>
     </div>
   );

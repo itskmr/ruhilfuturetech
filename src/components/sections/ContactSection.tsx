@@ -62,7 +62,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold mb-1">Email Us</h4>
-                    <p className="text-gray-600">info@ruhilfuture.com</p>
+                    <p className="text-gray-600">info@rftsystems.com</p>
                   </div>
                 </div>
                 
@@ -72,7 +72,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold mb-1">Call Us</h4>
-                    <p className="text-gray-600">+91 99996 27750</p>
+                    <p className="text-gray-600">+91 70821 01534</p>
                   </div>
                 </div>
               </div>

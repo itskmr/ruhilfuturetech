@@ -22,9 +22,9 @@ const Header = ({ isScrolled }: HeaderProps) => {
           <div className="flex items-center">
             <a href="/" className="h-16 w-16 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md">
               <img 
-                src="/logo1.jpg" 
+                src="/RFT logo1.jpg" 
                 alt="Ruhil Future Technology Logo" 
-                className="h-16 w-16 object-cover rounded-full border-4 border-blue-500 shadow-lg"
+                className="h-16 w-16 object-contain rounded-full border-4 border-blue-500 shadow-lg"
               />
             </a>
           </div>

@@ -10,7 +10,7 @@ const AboutSection = () => {
             </h2>
             <div className="w-20 h-1 bg-blue-500 mb-6"></div>
             <p className="text-gray-700 mb-5 leading-relaxed">
-              Founded in 2013, Ruhil Future Technologies is a pioneer in delivering innovative digital solutions. We help businesses elevate their operations through transformative technologies that enhance efficiency and fuel sustainable growth.
+              Founded in 19 March 2024, Ruhil Future Technologies is a pioneer in delivering innovative digital solutions. We help businesses elevate their operations through transformative technologies that enhance efficiency and fuel sustainable growth.
             </p>
             <p className="text-gray-700 mb-8 leading-relaxed">
               Our dedicated professionals bring a unique mix of technical expertise and creative insight, enabling us to build solutions that solve real-world challenges and surpass expectations.
@@ -37,9 +37,9 @@ const AboutSection = () => {
           <div className="order-1 lg:order-2 relative z-10 animate-slideUp" style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
             <div className="rounded-full overflow-hidden shadow-xl flex items-center justify-center bg-white border-4 border-blue-500 w-64 h-64 mx-auto">
               <img 
-                src="/logo1.jpg" 
+                src="/RFT logo1.jpg" 
                 alt="Ruhil Future Technology Logo" 
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-contain rounded-full"
               />
             </div>
             {/* Decorative Elements */}
