@@ -77,11 +77,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Phone size={20} className="text-blue-500 mr-3" />
-                <p className="text-gray-400">+91 99996 27750</p>
+                <p className="text-gray-400">+91 70821 01534</p>
               </div>
               <div className="flex items-center">
                 <Mail size={20} className="text-blue-500 mr-3" />
-                <p className="text-gray-400">info@ruhilfuture.com</p>
+                <p className="text-gray-400">info@rftsystems.com</p>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Ruhil Future Technology. All Rights Reserved.
+              © {currentYear} Ruhil Future Technologies. All Rights Reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-blue-500 text-sm transition-colors">
