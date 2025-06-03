@@ -71,7 +71,7 @@ function App() {
 
         {/* Floating Logo Button */}
         <a
-          href="https://uatweb.gyansetu.ai"
+          href="https://www.gyansetu.ai/"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-4 right-8 z-50 flex flex-col items-center focus:outline-none hover:scale-105 transition-transform"
