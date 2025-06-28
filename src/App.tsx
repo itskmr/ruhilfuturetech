@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
+import ContactPage from './pages/ContactPage';
 import Insights from './pages/Insights';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import type {} from 'react-router-dom';
@@ -57,6 +58,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/enquiry" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />
