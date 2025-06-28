@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, User, Mail, Lock, Eye, EyeOff, Send, Phone, MessageSquare, MapPin, Building, Calendar, FileText, CheckCircle, ChevronLeft, ChevronRight, Upload, GraduationCap, Briefcase, Globe, Layers, ListChecks, ClipboardCheck, FilePlus, LogOut } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { getApiUrl } from '../config/api';
 
 // --- User Interface ---
 interface User {
@@ -475,7 +476,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ user }) => {
       if (formData.academics) formDataToSend.append('academics', formData.academics);
       const { resume, academics, ...fieldsToSend } = formData;
       formDataToSend.append('data', JSON.stringify(fieldsToSend));
-      const response = await axios.post('http://localhost:5000/upload', formDataToSend, {
+      const response = await axios.post(getApiUrl('/upload'), formDataToSend, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setSubmitted(true);
