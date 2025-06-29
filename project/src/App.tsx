@@ -11,8 +11,8 @@ import EmployersLogin from './pages/EmployersLogin';
 import EmployersDashboard from './pages/EmployersDashboard';
 import ForgotPassword from './components/auth/ForgotPassword';
 import EmployerForgotPassword from './components/auth/EmployerForgotPassword';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import JobBoard from './pages/JobBoard';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import type {} from 'react-router-dom';
 import { MessageSquareDot, Send, CheckCircle2 } from 'lucide-react';
 import { ToastProvider } from './components/ToastContext'; // Import ToastProvider
@@ -68,8 +68,8 @@ function App() {
                   <Route path="/employers-dashboard" element={<EmployersDashboard />} />
                   <Route path="/forgot-password" element={<ForgotPassword />} />
                   <Route path="/employer-forgot-password" element={<EmployerForgotPassword />} />
-                  <Route path="/apply" element={<JobBoard />} /><Route path="/apply" element={<JobBoard />} />
                   <Route path="/apply" element={<JobBoard />} />
+                  <Route path="/job-board" element={<JobBoard />} />
                 </Routes>
               </main>
               <Footer />
