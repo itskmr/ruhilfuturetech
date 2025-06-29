@@ -384,10 +384,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ user }) => {
       if (!formData.course.trim()) newErrors.course = 'Course Name is required';
       if (!formData.college.trim()) newErrors.college = 'College/University is required';
       if (!formData.graduationYear.trim()) newErrors.graduationYear = 'Year of Passing is required';
-      else if (!/^\d{4}$/.test(formData.graduationYear) || parseInt(formData.graduationYear) < 1050 || parseInt(formData.graduationYear) > 2025)
+      else if (!/^\d{4}$/.test(formData.graduationYear) || parseInt(formData.graduationYear) < 1050 || parseInt(formData.graduationYear) > 2030)
         newErrors.graduationYear = 'Year must be between 1050 and 2025';
       if (!formData.marks.trim()) newErrors.marks = 'Aggregate Marks/CGPA is required';
-      else if (!/^\d{1,2}(\.\d{1,2})?$/.test(formData.marks) || parseFloat(formData.marks) < 0 || parseFloat(formData.marks) > 100)
+      else if (!/^\d{1,2}(\.\d{1,2})?$/.test(formData.marks) || parseFloat(formData.marks) < 0 || parseFloat(formData.marks) > 101)
         newErrors.marks = 'Marks must be between 0 and 100';
       if (!formData.allSemCleared) newErrors.allSemCleared = 'This field is required';
     }
@@ -1060,7 +1060,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ user }) => {
                   onChange={e => handleInputChange('agree', e.target.checked)}
                   className="accent-blue-600"
                 />
-                <span>I agree to be contacted via phone, WhatsApp, and email regarding this hiring process.</span>
+                <span>I agree to be contacted via, Phone, WhatsApp, and Email regarding hiring process and could be considered for any future opprotunities and programs.</span>
               </label>
               {errors.agree && <p className="text-red-500 text-sm">{errors.agree}</p>}
             </div>

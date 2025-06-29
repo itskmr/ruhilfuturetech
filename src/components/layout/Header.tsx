@@ -86,6 +86,13 @@ const Header = ({ isScrolled }: HeaderProps) => {
                 What We Do
               </a>
               <a
+                href="/insights"
+                className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Insights
+              </a>
+              <a
                 href="#contact"
                 className="px-4 py-2 text-blue-600 font-medium bg-blue-50 hover:bg-blue-100 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
